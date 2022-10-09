@@ -1,0 +1,93 @@
+<div class="container admin-category">
+  <div class="adding">
+    <button (click)="adding()" class="btn-add-category" type="button">
+      {{ !isAddet ? 'ЗАКРИТИ' : 'ДОДАТИ КАТЕГОРІЮ'}}
+    </button>
+    <div *ngIf="!isAddet">
+      <form [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+        <div class="row">
+          <div class="col mb-3">
+            <input formControlName="name" name="name" type="text" class="form-control" placeholder="*Назва"
+              aria-label="name" />
+          </div>
+          <div class="col mb-3">
+            <input formControlName="path" name="path" type="text" class="form-control" placeholder="*Шлях"
+              aria-label="title" />
+          </div>
+        </div>
+        <ng-container *ngIf="!isUploaded">
+          <div class="mb-3">
+            <input class="form-control form-control" id="formFile" type="file" (change)="upload($event)" />
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="uploadPercent"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="isUploaded">
+          <img class="img m-3" [src]="valueByControl('imagePath')" alt="" height="100px" />
+          <button type="button" class="btn-add" (click)="deleteImage()">
+            Видалити
+          </button>
+        </ng-container>
+
+        <button [disabled]="categoryForm.invalid" type="submit" class="btn-add">
+          {{ editStatus ? "Зберегти" : "Додати" }}
+        </button>
+      </form>
+    </div>
+  </div>
+  <table *ngIf="isAddet" class="table">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">Назва</th>
+        <th scope="col">Шлях</th>
+        <th scope="col">Картинка</th>
+        <th scope="col">Дії</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of adminCategories">
+        <td>№ {{ category.id }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category.path }}</td>
+        <td>
+          <img [src]="category.imagePath" alt="" height="50px" />
+        </td>
+        <td class="d-flex flex-column">
+          <button (click)="editCategory(category)" type="button">
+            Редагувати
+          </button>
+          <button [disabled]="editStatus" type="button" (click)="deleteCategory(category)">
+            Видалити
+          </button>
+        </td>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Попередження</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Ви впевнені, що хочите видалити категорію?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Закрити
+                </button>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" type="button"
+                  class="btn btn-primary">
+                  Видалити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+  <div class="spacer-xl"></div>
+</div>

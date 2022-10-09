@@ -1,0 +1,133 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-height: 180px;
+}
+
+footer{
+  max-height: 180px !important;
+}
+
+table {
+  height: 121px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 15px;
+  background-color: white;
+  border-top: 4px solid #b5d8f7;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0rem;
+}
+th {
+  color: #000;
+}
+
+tr {
+  height: 40px;
+  color: #5a5a5a;
+  width: 10px;
+  padding: 0px;
+}
+
+.table-info {
+  width: 212px;
+  background-color: white;
+
+}
+
+.table-info-2 {
+    width: 212px;
+    background-color: white;
+    vertical-align: text-bottom;
+  
+  }
+
+.table-info-1 {
+  width: 250px;
+}
+
+.fotter-menu {
+  display: flex;
+  font-weight: normal;
+  width: 373px;
+  font-size: 18px;
+  margin-left: 169px;
+  justify-content: space-evenly;
+}
+
+.fotter-payment {
+  display: flex;
+  width: 373px;
+  font-size: 18px;
+  margin-left: 169px;
+  justify-content:center;
+}
+
+.pay-card-item {
+  position: relative;
+  width: 69px;
+  height: 39px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 3px 0px 3px;
+}
+
+.icon-btn {
+  display: block;
+  width: 49px;
+  height: 49px;
+  background: #b5d8f7;
+  border: 2px solid #b5d8f7;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  padding-top: 8px;
+  margin-top: 6px;
+}
+
+.icon-btn:hover {
+  background: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.fotter-social {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-logo{
+    height: 50px;
+    position: relative;
+    bottom: 14px;
+    left: 21px;
+}
+
+.fotter-logo-redstone{
+    padding-right: 18px !important
+}
+
+
+.fotter-redstone{
+    height: 18px;
+    position: relative;
+    top: 7px;
+    right:12px ;
+}

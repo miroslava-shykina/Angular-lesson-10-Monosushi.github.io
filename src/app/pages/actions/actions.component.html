@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="blok-title">
+    <div>
+      <hr />
+      <div class="title">Акції</div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <ng-container *ngIf="userActions.length > 0">
+      <div class="col-xl-6 col-md-6 col-12" *ngFor="let action of userActions">
+        <div class="block-info-link" [routerLink]="['/actions', action.id]">
+          <img [src]="action.imagePath" class="block-info-img" alt="..." />
+          <h5 class="title text-cut-2 text-center"></h5>
+          <hr />
+
+          <div class="card-body text-center">
+            <a
+              [routerLink]="['/actions', action.id]"
+              class="btn btn-small btn-primary btn-block-center btn-fix-2"
+              href="https://monosushi.com.ua/action/rus-kozhen-pyatyj-v-podarunok/"
+              >ДІЗНАТИСЬ БІЛЬШЕ</a
+            >
+          </div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="userActions.length === 0">
+      <div class="card text-center">
+        <div class="card-body">
+          <h1 class="text-centr">Поки що не має нових акцій</h1>
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="bottom"></div>
+</div>

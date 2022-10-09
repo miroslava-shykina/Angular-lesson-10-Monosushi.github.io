@@ -1,0 +1,42 @@
+<div class="blok-title">
+  <div>
+    <hr />
+    <div class="title" *ngFor="let product of userProducts">{{ product.category.name}}</div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row d-flex block-carts">
+    <div class="cart-product nav-li-border" *ngFor="let product of userProducts">
+      <div class="">
+        <a href="" [routerLink]="['/product-category/' + product.category.path,product.id
+      ]">
+          <img [src]="product.imagePath" class="card-img-top" alt="..." />
+        </a>
+        <div class="card-body">
+          <h5 class="card-title" [routerLink]="['/product-category/' + product.category.path,product.id]">
+            {{ product.name }}
+          </h5>
+          <div class="d-flex card-description">
+            <p class="card-text cart-ingredients me-1">{{ product.ingredients }}</p>
+            <p class="card-text"><b>{{ product.weight }} г</b></p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="d-flex align-items-center"><b>{{ product.price *
+              product.count}}</b> грн</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <div class="border btn-group-plus d-flex">
+                <button (click)="productCount(product, false)" type="button" class="btn-minus-plus">-</button>
+                <input class="form-control btn-text" type="text" name="" id=""[value]="product.count" />
+                <button (click)="productCount(product, true)" type="button" class="btn-minus-plus">+</button>
+              </div>
+            </div>
+            <a href="#" class="btn btn-order" 
+            (click)="addToBasket(product)"
+            >ЗАМОВИТИ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

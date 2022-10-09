@@ -1,0 +1,117 @@
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a [routerLink]="['']" routerLinkActive="active" class="navbar-brand" href="#">
+                <img class="img-logo" src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="menu-product">
+                        <li class="nav-item product-category nav-li-border">
+                            <a [routerLink]="['/actions']" routerLinkActive="active" class="nav-link active"
+                                aria-current="page" href="#">
+                                <img class="img-product"
+                                    src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-gift.svg" alt="" />
+                            </a>
+                            <span class="span">Акції</span>
+                        </li>
+                        <li class="nav-item product-category nav-li-border">
+                            <a [routerLink]="['/product-category/roli']" routerLinkActive="active"
+                                class="nav-link active" aria-current="page" href="#">
+                                <img class="img-product"
+                                    src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-rolls.svg"
+                                    alt="" />
+                            </a>
+                            <span class="span">Роли</span>
+                        </li>
+                        <li class="nav-item product-category nav-li-border">
+                            <a [routerLink]="['/product-category/setu']" routerLinkActive="active"
+                                class="nav-link active" aria-current="page" href="#">
+                                <img class="img-product"
+                                    src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-sets.svg" alt="" />
+                            </a>
+                            <span class="span">Сети</span>
+                        </li>
+                        <li class="nav-item product-category nav-li-border">
+                            <a [routerLink]="['/product-category/napoyi']" routerLinkActive="active"
+                                class="nav-link active" aria-current="page" href="#"><img class="img-product"
+                                    src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-drinks.svg"
+                                    alt="" />
+                            </a>
+                            <span class="span">Напої</span>
+                        </li>
+                        <li class="nav-item product-category nav-li-border">
+                            <a [routerLink]="['/product-category/sousi']" routerLinkActive="active"
+                                class="nav-link active" aria-current="page" href="#">
+                                <img class="img-product"
+                                    src="https://monosushi.com.ua/wp-content/uploads/2021/09/icon.svg" alt="" />
+                            </a>
+                            <span class="span">Соуси</span>
+                        </li>
+                    </div>
+
+                    <li class="nav-item dropdown header-burger-menu" >
+                        <a class="nav-link dropdown-toggle menu" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="50"
+                            [class.active] = "isFavorite" (click)="removeClass()">
+                                <path class="line top"
+                                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                                <path class="line middle" d="m 30,50 h 40" />
+                                <path class="line bottom"
+                                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-style" aria-labelledby="navbarDropdown" (click)="isFavorite =false">
+                            
+                            <li (click)="removeClass()">
+
+                                <a [routerLink]="['/dostavka-ta-oplata']" routerLinkActive="active"
+                                    class="dropdown-item" href="#">
+                                    Доставка та оплата</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/about-us']" routerLinkActive="active" class="dropdown-item"
+                                    href="#">Про нас</a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/actions']" routerLinkActive="active" class="dropdown-item"
+                                    href="#">Акції</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="header-telephone-call">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="" />
+                        <span>МИ ЗАТЕЛЕФОНУЄМО</span>
+                    </li>
+
+                    <li class="header-work-time">
+                        <a class="tel-num" href=""> (097)878 08 37</a>
+                        <div class="work-time">
+                            Працюємо з <b>11:00</b> до <b>21:30</b>
+                        </div>
+                    </li>
+                    <li class="user-admin-pages nav-li-border">
+                        <a [routerLink]="['/admin']" routerLinkActive="active">
+                            <img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/user.svg" alt="" />
+                        </a>
+                    </li>
+                    <li class="header-basket">
+                        <div class="header-basket-count">1</div>
+                        <a href=""><img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/basket.svg"
+                                alt="" />
+                        </a>
+
+                        <div><b>0</b> грн</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

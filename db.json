@@ -1,0 +1,128 @@
+{
+  "actions": [
+    {
+      "date": "2022-09-17T08:19:04.963Z",
+      "name": "Акції",
+      "title": "\"4+1=4\"",
+      "description": "\nЗамовляйте 5 ролів, а платіть за 4.\nЗамовляйте 10 ролів, а платіть за 8 і так далі.\nБезкоштовним вважається рол з найменшою вартістю.\nЦя акція не поєднується з іншими акціями.\n",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fpyatyj-v-podarunok-4.0_page-0001-scaled-697x379.jpg?alt=media&token=f4ba63af-1e0d-47a4-82da-eec6e13bcc79",
+      "id": 2
+    },
+    {
+      "date": "2022-08-04T23:20:22.622Z",
+      "name": "Акції",
+      "title": "День народження з Моносуші",
+      "description": "\nПри оформленні замовлення вкажіть промокод “День народження” та отримайте “Запечений сет” безкоштовно до Вашого замовлення.\nТермін дії акції – День народження плюс один день до та після свята.\nЦя акція починає діяти при мінімальній сумі замовлення 750 грн.\nДля отримання подарунку іменинник має показати кур’єру оригінал документу, що підтверджує його дату народження.\nЦя акція не поєднується з іншими акціями.\n",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fden-narodzhennya-razom-z-monosushi_page-0001-scaled-697x379%20(1).jpg?alt=media&token=9655c736-80e1-4c1e-8ad6-0869c3ecd30e",
+      "id": 4
+    },
+    {
+      "date": "2022-08-04T23:22:14.486Z",
+      "name": "Акції",
+      "title": "Фотомарафон",
+      "description": "Розіграш проводиться в соціальній мережі – Instagram.\nЩоб стати учасником розіграшу варто зробити будь-який контент на задану тему з нашими ролами. Це може бути фото, відео, tik-tok.\nОбов’язково позначай нас на пості або сторі, щоб стати учасником марафону. ( інакше ми вас не побачимо )\nМарафон триває тиждень.\nПо закінченню марафону користувачі Instagram визначають переможця методом голосування.\nПереможець отримує Запечений сет в подарунок.\nДеталі актуального марафону уточнюйте в нашому Instagram: @monosushi.com.ua\nЦя акція не поєднується з іншими акціями.\n",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Ffotomarafon_page-0001-scaled-697x379.jpg?alt=media&token=84ab10c6-8f11-4637-af97-40b7e007adae",
+      "id": 5
+    },
+    {
+      "date": "2022-09-23T17:35:46.056Z",
+      "name": "Акції",
+      "title": "акції",
+      "description": "опис",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fsamovyviz-3.0_page-0001-1-scaled-697x379.jpg?alt=media&token=0b4fa020-83f9-406c-9958-da04a001a159",
+      "id": 6
+    }
+  ],
+  "categories": [
+    {
+      "name": "Роли",
+      "path": "roli",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=56992d2f-2a67-4356-a571-731b9e5b792c",
+      "id": 1
+    },
+    {
+      "name": "Сети",
+      "path": "setu",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=1f47e9e6-4528-4571-ad08-7ac747ad4ad3",
+      "id": 2
+    },
+    {
+      "name": "Напої",
+      "path": "napoyi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-drinks.svg?alt=media&token=af5649d7-eb9b-4220-aa3f-1f7f4e29c013",
+      "id": 3
+    },
+    {
+      "name": "Соуси",
+      "path": "sousi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Ficon-sous.svg?alt=media&token=11de2a77-78bb-499d-af96-3ee9900b6497",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "category": {
+        "name": "Роли",
+        "path": "roli",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=56992d2f-2a67-4356-a571-731b9e5b792c",
+        "id": 1
+      },
+      "name": "Макі з лососем – 50%",
+      "path": "roli",
+      "ingredients": " Рис, норі, лосось",
+      "weight": "120",
+      "price": 81,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fmaki-z-lososem-1.jpg?alt=media&token=da6d9b45-9789-4c28-8902-7af791c99f30",
+      "count": 1,
+      "id": 1
+    },
+    {
+      "category": {
+        "name": "Сети",
+        "path": "setu",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=1f47e9e6-4528-4571-ad08-7ac747ad4ad3",
+        "id": 2
+      },
+      "name": "Сет Філадельфія",
+      "path": "setu",
+      "ingredients": "Філадельфія: з лососем / в кунжуті / з тунцем / з вугрем",
+      "weight": "1070",
+      "price": 540,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Ffiladelfia.jpg?alt=media&token=dcf5face-8641-42e3-93f8-ded51861be78",
+      "count": 1,
+      "id": 2
+    },
+    {
+      "category": {
+        "name": "Напої",
+        "path": "napoyi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fnav-img-drinks.svg?alt=media&token=af5649d7-eb9b-4220-aa3f-1f7f4e29c013",
+        "id": 3
+      },
+      "name": "Фанта",
+      "path": "napoyi",
+      "ingredients": " Рис, норі, лосось",
+      "weight": "0,33",
+      "price": 30,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Ffanta-033.jpg.pagespeed.ce.AS23fDMltR.jpg?alt=media&token=a6763928-da44-4bf5-b9ae-de4f65391e91",
+      "count": 1,
+      "id": 3
+    },
+    {
+      "category": {
+        "name": "Соуси",
+        "path": "sousi",
+        "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Ficon-sous.svg?alt=media&token=11de2a77-78bb-499d-af96-3ee9900b6497",
+        "id": 4
+      },
+      "name": "Соєвий Соус",
+      "path": "sousi",
+      "ingredients": "соус",
+      "weight": "10",
+      "price": 10,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-14960.appspot.com/o/images%2Fsousi.jpg?alt=media&token=5050e969-b990-4e8c-b794-5c68afcb337a",
+      "count": null,
+      "id": 4
+    }
+  ]
+}

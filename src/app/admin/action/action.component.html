@@ -1,0 +1,103 @@
+<div class="container admin-action">
+  <div class="adding">
+    <button (click)="adding()" type="button" class="btn-add-action">
+      {{ !isAddet ? 'ЗАКРИТИ' : 'ДОДАТИ АКЦІЮ'}}
+    </button>
+    <div *ngIf="!isAddet">
+      <form [formGroup]="actionForm" (ngSubmit)="addAction()">
+        <div class="row">
+          <div class="col">
+            <input formControlName="name" name="name" type="text" class="form-control" placeholder="*Назва"
+              aria-label="name" />
+          </div>
+          <div class="col mb-3">
+            <input formControlName="title" name="title" type="text" class="form-control" placeholder="*Заголовок"
+              aria-label="title" />
+          </div>
+        </div>
+        <div class="form-floating">
+          <textarea formControlName="description" name="description" class="form-control" placeholder="*Опис"
+            id="floatingTextarea"></textarea>
+          <label for="floatingTextarea">*Опис</label>
+        </div>
+        <ng-container *ngIf="!isUploaded">
+          <div class="mb-3">
+            <input class="form-control form-control" id="formFile" type="file" (change)="upload($event)" />
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="uploadPercent"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="isUploaded">
+          <img [src]="valueByControl('imagePath')" alt="" height="100px" class="m-3" />
+          <button type="button" class="btn-add" (click)="deleteImage()">
+            Видалити
+          </button>
+        </ng-container>
+
+        <button [disabled]="actionForm.invalid" type="submit" class="btn-add">
+          {{ editStatus ? "Зберегти" : "Додати" }}
+        </button>
+      </form>
+      <div class="spacer-lg"></div>
+    </div>
+  </div>
+
+  <table *ngIf="isAddet" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Дата</th>
+        <th scope="col">Назва</th>
+        <th scope="col">Заголовок</th>
+        <th scope="col">Опис</th>
+        <th scope="col">Картинка</th>
+        <th scope="col">Дії</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let action of adminActions">
+        <span hidden="0px">{{ action.id }}</span>
+        <td>{{ action.date | date: "M . y" }}</td>
+        <td>{{ action.name }}</td>
+        <td>{{ action.title }}</td>
+        <td class="description">
+          {{ action.description | slice: 0:70 }}
+          <span *ngIf="action.description.length > 40">...</span>
+        </td>
+
+        <td>
+          <img [src]="action.imagePath" alt="" height="50px" />
+        </td>
+        <td class="d-flex flex-column">
+          <button (click)="editAction(action)" type="button">Редагувати</button>
+          <button  [disabled]="editStatus" type="button" (click)="deleteAction(action)" >
+            Видалити
+          </button>
+        </td>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Попередження</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Ви впевнені, що хочите видалити акцію?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Закрити
+                </button>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                  Видалити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>

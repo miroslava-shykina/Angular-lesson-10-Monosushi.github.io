@@ -1,0 +1,123 @@
+<div class="container admin-action">
+  <div class="adding">
+    <button (click)="adding()" type="button" class="btn-add-action">
+      {{ !isAddet ? 'ЗАКРИТИ' : 'ДОДАТИ ТОВАР'}}
+    </button>
+    <div *ngIf="!isAddet">
+      <form [formGroup]="productForm" (ngSubmit)="addProduct()">
+        <select formControlName="category" class="form-select mt-3">
+          <option [ngValue]="category" *ngFor="let category of adminCategories">
+            {{ category.name }}
+          </option>
+        </select>
+        <div class="row">
+          <div class="col">
+            <input formControlName="name" name="name" type="text" class="form-control" placeholder="*Назва"
+              aria-label="name" />
+          </div>
+          <div class="col mb-3">
+            <input formControlName="path" name="path" type="text" class="form-control" placeholder="*Шлях"
+              aria-label="path" />
+          </div>
+        </div>
+
+        <div class="form-floating">
+          <input formControlName="ingredients" type="text" name="ingredients" class="form-control"
+            placeholder="*Інгридієнти" id="ingredients" aria-label="ingredients" />
+        </div>
+        <div class="row">
+          <div class="col">
+            <input formControlName="weight" name="weight" type="text" class="form-control" placeholder="*Вага"
+              aria-label="weight" />
+          </div>
+          <div class="col mb-3">
+            <input formControlName="price" name="price" type="number" class="form-control" placeholder="*Ціна"
+              aria-label="price" />
+          </div>
+        </div>
+        <ng-container *ngIf="!isUploaded">
+          <div class="mb-3">
+            <input class="form-control form-control" id="formFile" type="file" (change)="upload($event)" />
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped" role="progressbar" [style.width.%]="uploadPercent"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="isUploaded">
+          <img  [src]="valueByControl('imagePath')"  alt="" width="100px" class="m-3" />
+          <button type="button" class="btn-add" (click)="deleteImage()">
+            Видалити
+          </button>
+        </ng-container>
+
+        <button [disabled]="productForm.invalid" type="submit" class="btn-add">
+          {{ editStatus ? "Зберегти" : "Додати" }}
+        </button>
+      </form>
+      <div class="spacer-lg"></div>
+    </div>
+  </div>
+
+  <table *ngIf="isAddet" class="table">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">Категорія</th>
+        <th scope="col">Назва</th>
+        <th scope="col">Інгридієнти</th>
+        <th scope="col">Вага</th>
+        <th scope="col">Ціна</th>
+        <th scope="col">Картинка</th>
+        <th scope="col">Дії</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of adminProducts">
+        <td>№{{ product.id }}</td>
+        <td>{{ product.category.name }}</td>
+        <td>{{ product.name }}</td>
+        <td class="description">
+          {{ product.ingredients | slice: 0:70 }}
+          <span *ngIf="product.ingredients.length > 40">...</span>
+        </td>
+        <td>{{ product.weight }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <img [src]="product.imagePath" alt="" height="50px" />
+        </td>
+        <td class="d-flex flex-column">
+          <button (click)="editProduct(product)" type="button">
+            Редагувати
+          </button>
+          <button [disabled]="editStatus" type="button" (click)="deleteProduct(product)">
+            Видалити
+          </button>
+        </td>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Попередження</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Ви впевнені, що хочите видалити товар?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Закрити
+                </button>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-dismiss="modal" type="button"
+                  class="btn btn-primary">
+                  Видалити
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>

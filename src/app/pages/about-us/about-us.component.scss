@@ -1,0 +1,147 @@
+
+.container {
+    width: 100%;
+    max-width: 1750px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.blok-title {
+  width: 100%;
+  height: 271px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  color: #252525;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.2em;
+  margin-bottom: 60px;
+}
+
+hr {
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #0088ff;
+  margin: 0;
+}
+
+li::marker {
+  width: 11px !important;
+  height: 11px !important;
+  border-radius: 100%;
+  color: #b5d8f7;
+}
+
+.simple-page ul li + li,
+.simple-page ol li + li {
+  margin-top: 8px;
+}
+.simple-page ul li,
+.simple-page ol li {
+  position: relative;
+  font-size: 18px;
+  line-height: 1.47em;
+  padding-left: 24px;
+}
+
+.simple-page p {
+  position: relative;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: #5a5a5a;
+}
+.simple-page > * {
+  margin-bottom: 25px;
+}
+
+.spacer-sm {
+    height: 40px;
+}
+
+.spacer-md {
+  height: 60px;
+}
+
+.spacer-xl {
+  height: 90px;
+}
+
+
+.spacer-lg {
+    height: 90px;
+  }
+  
+
+.block-img img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+
+.simple-page h1, .simple-page h2, .simple-page h3 {
+    color: #252525;
+    font-weight: 700;
+}
+
+.advantages-item {
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+}
+
+.advantages-item-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 10px;
+    background: #b5d8f7;
+    position: relative;
+    margin: 30px auto 20px;
+}
+
+.advantages-item-img img {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.accordion-item{
+    width: 855px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top: 1px solid #dcdcdc !important;
+    border: none;
+}
+
+.accordion-title {
+    width: 855px;
+    height: 93px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: #5a5a5a;
+    padding: 32px 20px 37px 0;
+    cursor: pointer;
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+}
+
+.accordion-title:hover {
+    color: black;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.5em;
+}

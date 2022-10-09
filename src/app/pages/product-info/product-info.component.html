@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="blok-title"></div>
+  <div class="info-product">
+    <span [routerLink]="['']" routerLinkActive="active">Головна </span>
+    <span [routerLink]="[
+        '/product-category/' + currentProduct.category.path
+      ]">
+      ● {{ currentProduct.category.name }}</span>
+    <span> ● {{ currentProduct.name }}</span>
+  </div>
+  <div class="container">
+    <div class="spacer-md"></div>
+    <div class="row justify-content-center">
+      <div class="mb-3" style="max-width: 1100px">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img [src]="currentProduct.imagePath" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-6">
+            <div class="card-body m-1">
+              <h5 class="card-title h2">{{ currentProduct.name }}</h5>
+              <p class="card-text">
+                <b>Склад: </b>{{ currentProduct.ingredients }}
+              </p>
+              <p class="card-text">
+                <b>Вага: </b>{{ currentProduct.weight }} г
+              </p>
+              <div class="d-flex justify-content-between">
+                <p class="">{{ currentProduct.price *
+                  currentProduct.count}} грн</p>
+                <div class="btn-group btn-group-plus d-flex" role="group" aria-label="Basic example">
+                  <button (click)="productCount(currentProduct, false)" type="button" class="btn-minus-plus">-</button>
+                  <input style="border: none" class="form-control btn-text" type="text" name="" id="" [value]="currentProduct.count" />
+                  <button (click)="productCount(currentProduct, true)" type="button" class="btn-minus-plus">+</button>
+                </div>
+                <button type="button" class="btn btn-order" 
+                (click)="addToBasket(currentProduct)"
+                >
+                  ЗАМОВИТИ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spacer-md"></div>
+  </div>
+</div>

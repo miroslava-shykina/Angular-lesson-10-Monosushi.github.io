@@ -1,0 +1,116 @@
+@import "../../shared/styles/variables";
+
+.blok-title {
+  width: 100%;
+  height: 130px;
+  display: flex;
+}
+
+.info-product {
+  display: flex;
+  margin: 10px 0 27px 50px;
+}
+
+span {
+  font-size: 10px;
+  margin: 5px;
+}
+
+.spacer-md {
+  height: 60px;
+}
+
+.block-img {
+  border: 1px solid red;
+}
+
+.block-info {
+  border: 1px solid red;
+}
+
+.h2 {
+  font-size: 42px;
+  line-height: 1.2em;
+  color: #252525;
+  font-weight: bold;
+}
+
+b {
+  color: #b5d8f7;
+}
+
+.card-text {
+  color: #5a5a5a;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+button {
+  border-radius: 10px;
+}
+
+.btn-order {
+  font-size: 14px;
+  color: black;
+  border-radius: 9px;
+  border: 2px solid $primary;
+  font-weight: bold;
+  background-color: $primary;
+  width: 110px !important;
+  height: 46px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-order:hover {
+  background-color: white;
+}
+
+.btn-group-plus {
+  width: 112px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  color: #252525;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex !important;
+  justify-content: center;
+  background-color: white;
+}
+
+.btn-text{
+  padding: 0;
+  text-align: center;
+}
+
+input {
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  font-weight: bolder !important;
+  box-shadow: none !important;
+}
+
+.btn-minus-plus {
+  border: none;
+  width: 32px;
+  height: 36px;
+  justify-content: center;
+  background-color: white;
+  font-size: 24px;
+  line-height: 24px;
+  color: #5a5a5a;
+}
+
+.btn-minus-plus:hover {
+  background-color: $primary;
+}
+.btn-minus-plus:active {
+  padding-top: 2px;
+}
